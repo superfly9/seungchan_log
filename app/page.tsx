@@ -24,20 +24,6 @@ export default async function Home() {
           <h1 className="text-3xl font-bold tracking-tight mb-2">기록 남기기</h1>
           <p className="text-gray-500">이것저것 남기는 곳</p>
         </div>
-        <div className="flex gap-4">
-          <Link 
-            href="/login" 
-            className="px-4 py-2 text-sm font-medium text-gray-500 hover:text-black transition-colors"
-          >
-            로그인
-          </Link>
-          <Link 
-            href="/write" 
-            className="px-4 py-2 bg-black text-white rounded-md text-sm font-medium hover:bg-gray-800 transition-colors"
-          >
-            글쓰기
-          </Link>
-        </div>
       </header>
       
       <div className="space-y-8">
