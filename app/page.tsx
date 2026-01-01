@@ -68,11 +68,11 @@ export default async function Home() {
                 )}
               </div>
               <Link href={`/posts/${post.id}`} className="group">
-                <h2 className="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">
+                <h2 className="text-xl font-semibold mb-2 hover:text-blue-600 transition-colors">
                   {post.title || "제목 없음"}
                 </h2>
               </Link>
-              <p className="text-gray-600 line-clamp-3 leading-relaxed">
+              <p className="text-foreground leading-relaxed">
                 {post.content?.slice(0, 150)}
                 {post.content && post.content.length > 150 ? "..." : ""}
               </p>

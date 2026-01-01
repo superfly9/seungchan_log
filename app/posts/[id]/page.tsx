@@ -32,20 +32,20 @@ export default async function PostPage({ params }: PageProps) {
       <div className="mb-8">
         <Link 
           href="/" 
-          className="text-sm text-gray-500 hover:text-black transition-colors"
+          className="text-sm text-gray-500 hover:text-foreground transition-colors"
         >
           ← 목록으로 돌아가기
         </Link>
       </div>
 
       <article>
-        <header className="mb-8 border-b border-gray-100 pb-8">
+        <header className="mb-8 border-b border-gray-100 dark:border-gray-800 pb-8">
           <div className="flex items-center gap-2 mb-4 text-sm text-gray-500">
             <time dateTime={post.created_at}>
               {format(new Date(post.created_at), "yyyy년 MM월 dd일")}
             </time>
             {!post.is_public && (
-              <span className="px-2 py-0.5 bg-gray-100 text-gray-600 text-xs rounded-full font-medium">
+              <span className="px-2 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-xs rounded-full font-medium">
                 비공개
               </span>
             )}
@@ -56,14 +56,14 @@ export default async function PostPage({ params }: PageProps) {
           </h1>
         </header>
 
-        <div className="prose prose-gray max-w-none text-gray-800 leading-relaxed whitespace-pre-wrap">
+        <div className="prose prose-gray dark:max-w-none text-foreground leading-relaxed whitespace-pre-wrap">
           {post.content}
         </div>
       </article>
       
       {/* 작성자 본인일 경우 수정 버튼 등 추가 가능 영역 */}
       {user && user.id === post.user_id && (
-        <div className="mt-12 pt-8 border-t border-gray-100 flex justify-end">
+        <div className="mt-12 pt-8 border-t border-gray-100 dark:border-gray-800 flex justify-end">
            {/* 추후 수정 기능 추가 시 여기에 */}
         </div>
       )}
