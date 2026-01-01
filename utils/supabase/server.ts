@@ -10,7 +10,8 @@ export async function createClient() {
     {
       cookies: {
         getAll() {
-          return cookieStore.getAll()
+          const cookies = cookieStore.getAll()
+          return cookies
         },
         setAll(cookiesToSet) {
           try {
