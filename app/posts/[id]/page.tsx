@@ -64,7 +64,12 @@ export default async function PostPage({ params }: PageProps) {
       {/* 작성자 본인일 경우 수정 버튼 등 추가 가능 영역 */}
       {user && user.id === post.user_id && (
         <div className="mt-12 pt-8 border-t border-gray-100 dark:border-gray-800 flex justify-end">
-           {/* 추후 수정 기능 추가 시 여기에 */}
+          <Link
+            href={`/posts/${post.id}/edit`}
+            className="text-sm text-gray-500 hover:text-black dark:hover:text-white transition-colors underline decoration-gray-300 underline-offset-4"
+          >
+            수정하기
+          </Link>
         </div>
       )}
     </main>
